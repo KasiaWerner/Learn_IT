@@ -8,8 +8,7 @@ public class Kayak_map {
 
     private ArrayList<String> listOfRoutes;
     private int numberOfRoutes;
-	private int index;
-	private String element;
+	
     
     public Kayak_map(){
     numberOfRoutes = 2;
@@ -25,7 +24,18 @@ public class Kayak_map {
       
         for (int i=0; i<2; i++){ 
 
-      System.out.println(list.get(i));
+      //System.out.println(list.get(i));
+     
+      
+      //testing "add" and "remove" methods
+      kayak.listOfRoutes.add("Route 3"); 
+      kayak.listOfRoutes.add("Route 4"); 
+      System.out.println(kayak.listOfRoutes);
+     
+      kayak.listOfRoutes.remove(0); 
+      System.out.println(kayak.listOfRoutes);
+       
+      
        }
     }
     
@@ -33,12 +43,13 @@ public class Kayak_map {
         return this.listOfRoutes;
     }
     
-    public void addRoute(){
-    	listOfRoutes.add(index, element);
+    public boolean addRoute(String e){
+    	listOfRoutes.add(e);
+    	return true;
     	
     }
     
-    public void deleteRoute(){
+    public void deleteRoute(int index){
     	listOfRoutes.remove(index);
     }
     
