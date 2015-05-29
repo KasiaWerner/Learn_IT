@@ -14,7 +14,7 @@ public class Obstacle {
 
     public static void main(String[] args) {
         Obstacle rock = new Obstacle("Rock", 25, 45);
-        //Then, in the main method:
+        
         rock.changeName("Stone");
        
         System.out.println(rock.getName());
@@ -22,7 +22,7 @@ public class Obstacle {
         rock.setLocation(32.0, 78.0);
        
         System.out.println(rock.getPosition());
-        //System.out.println(rock.obstaclePosition);
+        
     }
     public void changeName(String newName) {
         this.obstacleName = newName;
@@ -36,7 +36,7 @@ public class Obstacle {
         this.obstaclePosition = new Point2D.Double (newPositionX, newPositionY);
     }
    
-    public Point2D.Double getPosition(){  //it works without this method. Do I need it?
+    public Point2D.Double getPosition(){  
         return this.obstaclePosition;
     }
 }

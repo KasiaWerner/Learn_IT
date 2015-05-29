@@ -29,9 +29,36 @@ public class Route {
      
         Route route = new Route("Route 1", 20, 20, 45, 45);
       
-      
-     
-     
+      System.out.println(route.routeName);
+     // route.moveStartPoint(30, 30);
+     //System.out.println(route.getStartPoint()); 
+     // route.moveEndPoint(50,  50);
+     // System.out.println(route.getEndPoint());
+     // route.changeRouteName("Missisipi");
+     // System.out.println(route.getRouteName());
     }
 
+    public void moveStartPoint (double newStartX, double newStartY){
+    	this.startPoint = new Point2D.Double (newStartX, newStartY);
+    }
+    
+    public Point2D.Double getStartPoint(){
+    	return this.startPoint;
+    }
+    
+    public void moveEndPoint (double newEndX, double newEndY){
+    	this.endPoint = new Point2D.Double (newEndX, newEndY);
+    }
+    
+    public Point2D.Double getEndPoint(){
+    	return this.endPoint;
+    }
+    
+    public void changeRouteName (String newRouteName){
+    	this.routeName = newRouteName;
+    }
+    
+    public String getRouteName(){
+    	return this.routeName;
+    }
 }
