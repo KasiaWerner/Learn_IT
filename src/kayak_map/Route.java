@@ -2,7 +2,6 @@ package kayak_map;
 
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class Route {
@@ -11,7 +10,7 @@ public class Route {
     private Point2D.Double startPoint;
     private Point2D.Double endPoint;
     private int numberOfObstacles;
-    private List<Obstacle> listOfObstacles;
+    private ArrayList<Obstacle> listOfObstacles;
 
 
     public Route (String name, double startX, double startY, double endX, double endY){
@@ -19,9 +18,8 @@ public class Route {
         routeName = name;
         startPoint = new Point2D.Double(startX, startY);
         endPoint = new Point2D.Double (endX, endY);
-        numberOfObstacles = 2;
+        numberOfObstacles = 0;
         listOfObstacles = new ArrayList<Obstacle>();
-        //listOfObstacles.add(0, 25, 45);
 
         }
  
@@ -29,13 +27,26 @@ public class Route {
      
         Route route = new Route("Route 1", 20, 20, 45, 45);
       
-      System.out.println(route.routeName);
+      //System.out.println(route.routeName);
      // route.moveStartPoint(30, 30);
      //System.out.println(route.getStartPoint()); 
      // route.moveEndPoint(50,  50);
      // System.out.println(route.getEndPoint());
-     // route.changeRouteName("Missisipi");
-     // System.out.println(route.getRouteName());
+     //route.changeRouteName("Missisipi");
+     //System.out.println(route.getRouteName());
+      
+      route.addObstacle("Rock", 22, 24);
+      route.addObstacle("Tree", 27.1, 25.3);
+      System.out.println(route.numberOfObstacles);
+      
+      ArrayList<Obstacle> list = route.getAllObstacles();
+      
+      for (int i=0; i<2; i++){
+
+     System.out.println(list.get(i));
+    
+      } 
+      
     }
 
     public void moveStartPoint (double newStartX, double newStartY){
@@ -60,5 +71,27 @@ public class Route {
     
     public String getRouteName(){
     	return this.routeName;
+    }
+    
+    
+    public void addObstacle(String name, double positionX, double positionY){
+        listOfObstacles.add (new Obstacle (name, positionX, positionY));
+        numberOfObstacles = numberOfObstacles + 1;
+        
+    }
+    
+   // public void deleteObstacle (String name, double positionX, double positionY){
+    	//listOfObstacles.remove (name, positionX, positionY);
+    	//numberOfObstacles = numberOfObstacles - 1; //how to remove specific element, when I don't want to use its index?
+    //}
+    
+    public ArrayList<Obstacle> getAllObstacles(){
+        return this.listOfObstacles;
+        
+    }
+    
+    @Override
+    public String toString (){
+    	return obstacleName + obstaclePostion;
     }
 }
