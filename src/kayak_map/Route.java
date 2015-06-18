@@ -90,8 +90,5 @@ public class Route {
         
     }
     
-    @Override
-    public String toString (){
-    	return obstacleName + obstaclePostion;
-    }
+
 }

@@ -39,4 +39,10 @@ public class Obstacle {
     public Point2D.Double getPosition(){  
         return this.obstaclePosition;
     }
+    
+	@Override
+    public String toString (){
+    	return String.format (obstacleName +" " + obstaclePosition);
+    	
+	}	
 }
