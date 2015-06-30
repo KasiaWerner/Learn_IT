@@ -4,9 +4,14 @@ import java.awt.geom.Point2D;
 
 public class MyPoint2D extends Point2D.Double {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	MyPoint2D (double x, double y) {
 		
-		//super();
+		super(x, y);
 	}
 	
 	public static void main(String[] args) {

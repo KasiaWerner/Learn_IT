@@ -1,14 +1,14 @@
 package kayak_map;
 
-import java.awt.geom.Point2D;
+//import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
 
 public class Route {
  
     private String routeName;
-    private Point2D.Double startPoint;
-    private Point2D.Double endPoint;
+    private MyPoint2D startPoint;
+    private MyPoint2D endPoint;
     private int numberOfObstacles;
     private ArrayList<Obstacle> listOfObstacles;
 
@@ -16,8 +16,8 @@ public class Route {
     public Route (String name, double startX, double startY, double endX, double endY){
      
         routeName = name;
-        startPoint = new Point2D.Double(startX, startY);
-        endPoint = new Point2D.Double (endX, endY);
+        startPoint = new MyPoint2D(startX, startY);
+        endPoint = new MyPoint2D (endX, endY);
         numberOfObstacles = 0;
         listOfObstacles = new ArrayList<Obstacle>();
 
@@ -50,18 +50,18 @@ public class Route {
     }
 
     public void moveStartPoint (double newStartX, double newStartY){
-    	this.startPoint = new Point2D.Double (newStartX, newStartY);
+    	this.startPoint = new MyPoint2D (newStartX, newStartY);
     }
     
-    public Point2D.Double getStartPoint(){
+    public MyPoint2D getStartPoint(){
     	return this.startPoint;
     }
     
     public void moveEndPoint (double newEndX, double newEndY){
-    	this.endPoint = new Point2D.Double (newEndX, newEndY);
+    	this.endPoint = new MyPoint2D (newEndX, newEndY);
     }
     
-    public Point2D.Double getEndPoint(){
+    public MyPoint2D getEndPoint(){
     	return this.endPoint;
     }
     

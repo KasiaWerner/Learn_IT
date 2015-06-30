@@ -1,15 +1,15 @@
 package kayak_map;
 
-import java.awt.geom.Point2D;
+//import java.awt.geom.Point2D;
 
 
 public class Obstacle {
     private String obstacleName;
-    private Point2D.Double obstaclePosition;
+    private MyPoint2D obstaclePosition;
    
     public Obstacle (String name, double positionX, double positionY){
         obstacleName = name;
-        obstaclePosition = new Point2D.Double(positionX, positionY);
+        obstaclePosition = new MyPoint2D(positionX, positionY);
     }
 
     public static void main(String[] args) {
@@ -33,10 +33,10 @@ public class Obstacle {
     }
    
     public void setLocation(double newPositionX, double newPositionY){
-        this.obstaclePosition = new Point2D.Double (newPositionX, newPositionY);
+        this.obstaclePosition = new MyPoint2D (newPositionX, newPositionY);
     }
    
-    public Point2D.Double getPosition(){  
+    public MyPoint2D getPosition(){  
         return this.obstaclePosition;
     }
     
