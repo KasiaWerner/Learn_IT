@@ -39,11 +39,14 @@ public class Route {
       route.addObstacle("Tree", 27.1, 25.3);
       System.out.println(route.numberOfObstacles);
       
+      //route.deleteObstacle("Rock", 22, 24);
+      
       ArrayList<Obstacle> list = route.getAllObstacles();
       
       for (int i=0; i<2; i++){
 
      System.out.println(list.get(i));
+     
     
       } 
       
@@ -80,12 +83,15 @@ public class Route {
         
     }
     
-   // public void deleteObstacle (String name, double positionX, double positionY){
-    	//listOfObstacles.remove (name, positionX, positionY);
-    	//numberOfObstacles = numberOfObstacles - 1; //how to remove specific element, when I don't want to use its index?
-    //}
+   public boolean deleteObstacle (String name, double positionX, double positionY){
+    listOfObstacles.remove //??? ( (name, positionX, positionY));
+    return true;
     
-    public ArrayList<Obstacle> getAllObstacles(){
+    	numberOfObstacles = numberOfObstacles - 1; 
+    }
+    
+
+	public ArrayList<Obstacle> getAllObstacles(){
         return this.listOfObstacles;
         
     }
