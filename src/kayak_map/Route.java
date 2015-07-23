@@ -83,8 +83,9 @@ public class Route {
         
     }
     
+    
    public boolean deleteObstacle (String name, double positionX, double positionY){
-    listOfObstacles.remove //??? ( (name, positionX, positionY));
+    listOfObstacles.remove (Obstacle );
     return true;
     
     	numberOfObstacles = numberOfObstacles - 1; 

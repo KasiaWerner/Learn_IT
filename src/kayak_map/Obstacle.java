@@ -45,4 +45,24 @@ public class Obstacle {
     	return String.format (obstacleName +" " + obstaclePosition);
     	
 	}	
+	
+	 @Override
+	    public boolean equals(Object o) {
+	    	   
+	        if (o == this) {
+	            return true;
+	        }
+	 
+	    
+	        if (!(o instanceof Obstacle)) {
+	            return false;
+	        }
+	         
+	         
+	        Obstacle c = (Obstacle) o;
+	         
+	         
+	        return String.compare(obstacleName, c.obstacleName) == 0
+	                && MyPoint2D.compare(obstaclePosition, c.obstaclePosition) == 0;
+	    }
 }
